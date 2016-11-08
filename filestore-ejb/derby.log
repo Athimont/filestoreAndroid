@@ -1,0 +1,32 @@
+----------------------------------------------------------------
+Tue Nov 08 17:17:29 CET 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0158-44ba-e929-000005e8de00 
+on database directory memory:C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-ejb\unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Loaded from file:/C:/Users/athim/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_102-b14
+user.dir=C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-ejb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Nov 08 17:17:31 CET 2016:
+Shutting down instance a816c00e-0158-44ba-e929-000005e8de00 on database directory memory:C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-ejb\unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+----------------------------------------------------------------
+Tue Nov 08 17:17:31 CET 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance 6ede40af-0158-44ba-e929-000005e8de00 
+on database directory memory:C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-ejb\unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 
+Loaded from file:/C:/Users/athim/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_102-b14
+user.dir=C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-ejb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Nov 08 17:17:32 CET 2016:
+Shutting down instance 6ede40af-0158-44ba-e929-000005e8de00 on database directory memory:C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-ejb\unit-testing-jpa with class loader sun.misc.Launcher$AppClassLoader@6bc7c054 

@@ -1,0 +1,4 @@
+org\filestore\web\FileItemsResource.class
+org\filestore\web\FileMetricsResource.class
+org\filestore\web\FileStoreApplication.class
+org\filestore\web\FileMetricsRepresentation.class

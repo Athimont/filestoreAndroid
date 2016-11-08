@@ -1,0 +1,6 @@
+org\filestore\api\FileItem.class
+org\filestore\api\FileServiceException.class
+org\filestore\api\FileService.class
+org\filestore\api\FileServiceLocal.class
+org\filestore\api\FileServiceAdmin.class
+org\filestore\api\FileServiceMetrics.class
