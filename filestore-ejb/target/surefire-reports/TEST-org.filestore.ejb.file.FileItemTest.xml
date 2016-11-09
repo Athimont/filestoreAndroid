@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="org.filestore.ejb.file.FileItemTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="org.filestore.ejb.file.FileItemTest" time="0.012" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
@@ -29,7 +29,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\apache-maven-3.3.9\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_102\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\athim\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\athim\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\athim\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\athim\AppData\Local\Apps\2.0\Z6XPKG7T.N8N\L2TDY4RL.COM\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\athim\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Java;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Java\jdk1.8.0_102\bin;C:\apache-maven-3.3.9\bin;C:\GNUstep\bin;C:\GNUstep\GNUstep\System\Tools;C:\Program Files (x86)\MSBuild\14.0\bin\;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_102\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\athim\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\cmd;C:\Users\athim\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\bin;C:\Users\athim\AppData\Local\GitHub\PortableGit_624c8416ee51e205b3f892d1d904e06e6f3c57c8\usr\share\git-tfs;C:\Users\athim\AppData\Local\Apps\2.0\Z6XPKG7T.N8N\L2TDY4RL.COM\gith..tion_317444273a93ac29_0003.0002_34b4671ab86a4854;C:\Users\athim\AppData\Local\GitHub\lfs-amd64_1.2.0;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\apache-maven-3.3.9\bin;C:\Program Files (x86)\Java;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Java\jdk1.8.0_102\bin;C:\apache-maven-3.3.9\bin;C:\GNUstep\bin;&quot;C:\Program Files (x86)\Android\android-sdk\tools&quot;;&quot;C:\Program Files (x86)\Android\android-sdk\platform-tools&quot;;C:\Program Files (x86)\MSBuild\14.0\bin\;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -63,7 +63,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="org.filestore.ejb.file.FileItemTest" name="testFileItem" time="0.013">
+  <testcase classname="org.filestore.ejb.file.FileItemTest" name="testFileItem" time="0.012">
     <failure message="Exception during testPersistence" type="java.lang.AssertionError">java.lang.AssertionError: Exception during testPersistence
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.filestore.ejb.file.FileItemTest.testFileItem(FileItemTest.java:131)
@@ -99,41 +99,41 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-err>nov. 08, 2016 5:17:29 PM org.filestore.ejb.file.FileItemTest setUp
+    <system-err>nov. 09, 2016 9:40:15 AM org.filestore.ejb.file.FileItemTest setUp
 INFOS: Starting memory database for unit tests
-nov. 08, 2016 5:17:30 PM org.filestore.ejb.file.FileItemTest setUp
+nov. 09, 2016 9:40:15 AM org.filestore.ejb.file.FileItemTest setUp
 INFOS: Building Hibernate EntityManager for unit tests
-nov. 08, 2016 5:17:30 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+nov. 09, 2016 9:40:15 AM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
 INFO: HHH000204: Processing PersistenceUnitInfo [
 	name: testPU
 	...]
-nov. 08, 2016 5:17:30 PM org.hibernate.Version logVersion
+nov. 09, 2016 9:40:15 AM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate Core {5.0.1.Final}
-nov. 08, 2016 5:17:30 PM org.hibernate.cfg.Environment &lt;clinit&gt;
+nov. 09, 2016 9:40:15 AM org.hibernate.cfg.Environment &lt;clinit&gt;
 INFO: HHH000206: hibernate.properties not found
-nov. 08, 2016 5:17:30 PM org.hibernate.cfg.Environment buildBytecodeProvider
+nov. 09, 2016 9:40:15 AM org.hibernate.cfg.Environment buildBytecodeProvider
 INFO: HHH000021: Bytecode provider name : javassist
-nov. 08, 2016 5:17:30 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager &lt;clinit&gt;
+nov. 09, 2016 9:40:15 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager &lt;clinit&gt;
 INFO: HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
-nov. 08, 2016 5:17:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH000402: Using Hibernate built-in connection pool (not for production use!)
-nov. 08, 2016 5:17:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000401: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:memory:unit-testing-jpa]
-nov. 08, 2016 5:17:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000046: Connection properties: {user=, password=****}
-nov. 08, 2016 5:17:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000006: Autocommit mode: false
-nov. 08, 2016 5:17:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
-nov. 08, 2016 5:17:30 PM org.hibernate.dialect.Dialect &lt;init&gt;
+nov. 09, 2016 9:40:16 AM org.hibernate.dialect.Dialect &lt;init&gt;
 INFO: HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
-nov. 08, 2016 5:17:30 PM org.hibernate.dialect.DerbyDialect &lt;init&gt;
+nov. 09, 2016 9:40:16 AM org.hibernate.dialect.DerbyDialect &lt;init&gt;
 WARN: HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
-nov. 08, 2016 5:17:31 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
+nov. 09, 2016 9:40:16 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
 INFO: HHH000227: Running hbm2ddl schema export
-nov. 08, 2016 5:17:31 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
+nov. 09, 2016 9:40:16 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
 INFO: HHH000230: Schema export complete
-nov. 08, 2016 5:17:31 PM org.filestore.ejb.file.FileItemTest testFileItem
+nov. 09, 2016 9:40:16 AM org.filestore.ejb.file.FileItemTest testFileItem
 GRAVE: error during testing file item
 java.lang.IllegalArgumentException: Unknown entity: org.filestore.ejb.file.entity.FileItemEntity
 	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1149)

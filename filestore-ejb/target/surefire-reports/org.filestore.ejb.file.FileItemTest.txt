@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: org.filestore.ejb.file.FileItemTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.83 sec <<< FAILURE!
-testFileItem(org.filestore.ejb.file.FileItemTest)  Time elapsed: 0.013 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.913 sec <<< FAILURE!
+testFileItem(org.filestore.ejb.file.FileItemTest)  Time elapsed: 0.012 sec  <<< FAILURE!
 java.lang.AssertionError: Exception during testPersistence
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.filestore.ejb.file.FileItemTest.testFileItem(FileItemTest.java:131)
