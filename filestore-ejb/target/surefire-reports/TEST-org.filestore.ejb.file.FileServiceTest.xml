@@ -104,37 +104,37 @@ Caused by: java.lang.IllegalArgumentException: Unknown entity: org.filestore.ejb
 	at org.filestore.ejb.file.FileServiceBean.internalPostFile(FileServiceBean.java:110)
 	... 33 more
 </error>
-    <system-err>nov. 09, 2016 9:40:17 AM org.filestore.ejb.file.FileServiceTest setUp
+    <system-err>nov. 12, 2016 3:20:26 PM org.filestore.ejb.file.FileServiceTest setUp
 INFOS: Starting memory database for unit tests
-nov. 09, 2016 9:40:17 AM org.filestore.ejb.file.FileServiceTest setUp
+nov. 12, 2016 3:20:26 PM org.filestore.ejb.file.FileServiceTest setUp
 INFOS: Building Hibernate EntityManager for unit tests
-nov. 09, 2016 9:40:17 AM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+nov. 12, 2016 3:20:26 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
 INFO: HHH000204: Processing PersistenceUnitInfo [
 	name: testPU
 	...]
-nov. 09, 2016 9:40:17 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+nov. 12, 2016 3:20:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH000402: Using Hibernate built-in connection pool (not for production use!)
-nov. 09, 2016 9:40:17 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 12, 2016 3:20:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000401: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:memory:unit-testing-jpa]
-nov. 09, 2016 9:40:17 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 12, 2016 3:20:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000046: Connection properties: {user=, password=****}
-nov. 09, 2016 9:40:17 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 12, 2016 3:20:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000006: Autocommit mode: false
-nov. 09, 2016 9:40:17 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+nov. 12, 2016 3:20:26 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
-nov. 09, 2016 9:40:17 AM org.hibernate.dialect.Dialect &lt;init&gt;
+nov. 12, 2016 3:20:26 PM org.hibernate.dialect.Dialect &lt;init&gt;
 INFO: HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
-nov. 09, 2016 9:40:17 AM org.hibernate.dialect.DerbyDialect &lt;init&gt;
+nov. 12, 2016 3:20:26 PM org.hibernate.dialect.DerbyDialect &lt;init&gt;
 WARN: HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
-nov. 09, 2016 9:40:17 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
+nov. 12, 2016 3:20:26 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
 INFO: HHH000227: Running hbm2ddl schema export
-nov. 09, 2016 9:40:17 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
+nov. 12, 2016 3:20:26 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
 INFO: HHH000230: Schema export complete
-nov. 09, 2016 9:40:17 AM org.filestore.ejb.file.FileServiceTest setUp
+nov. 12, 2016 3:20:26 PM org.filestore.ejb.file.FileServiceTest setUp
 INFOS: Building FileService
-nov. 09, 2016 9:40:17 AM org.filestore.ejb.file.FileServiceBean postFile
+nov. 12, 2016 3:20:26 PM org.filestore.ejb.file.FileServiceBean postFile
 INFOS: Post File called (InputStream)
-nov. 09, 2016 9:40:17 AM org.filestore.ejb.file.FileServiceBean internalPostFile
+nov. 12, 2016 3:20:26 PM org.filestore.ejb.file.FileServiceBean internalPostFile
 GRAVE: unexpected error during posting file
 java.lang.IllegalArgumentException: Unknown entity: org.filestore.ejb.file.entity.FileItemEntity
 	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1149)

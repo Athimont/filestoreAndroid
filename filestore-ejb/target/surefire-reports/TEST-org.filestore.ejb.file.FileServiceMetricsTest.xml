@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="org.filestore.ejb.file.FileServiceMetricsTest" time="0.294" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="org.filestore.ejb.file.FileServiceMetricsTest" time="0.295" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
@@ -63,7 +63,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="org.filestore.ejb.file.FileServiceMetricsTest" name="org.filestore.ejb.file.FileServiceMetricsTest" time="0.294">
+  <testcase classname="org.filestore.ejb.file.FileServiceMetricsTest" name="org.filestore.ejb.file.FileServiceMetricsTest" time="0.295">
     <error message="jbossHome &apos;/opt/wildfly-9.0.1.Final&apos; must exist" type="org.jboss.arquillian.container.spi.ConfigurationException">org.jboss.arquillian.container.spi.ConfigurationException: jbossHome &apos;/opt/wildfly-9.0.1.Final&apos; must exist
 	at org.jboss.arquillian.container.spi.client.deployment.Validate.configurationDirectoryExists(Validate.java:139)
 	at org.jboss.as.arquillian.container.DistributionContainerConfiguration.validate(DistributionContainerConfiguration.java:99)
@@ -137,11 +137,11 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
-    <system-err>nov. 09, 2016 9:40:16 AM org.filestore.ejb.file.FileItemTest tearDown
+    <system-err>nov. 12, 2016 3:20:25 PM org.filestore.ejb.file.FileItemTest tearDown
 INFOS: Shuting Hibernate JPA layer.
-nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl stop
+nov. 12, 2016 3:20:25 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl stop
 INFO: HHH000030: Cleaning up connection pool [jdbc:derby:memory:unit-testing-jpa]
-nov. 09, 2016 9:40:16 AM org.filestore.ejb.file.FileItemTest tearDown
+nov. 12, 2016 3:20:25 PM org.filestore.ejb.file.FileItemTest tearDown
 INFOS: Stopping memory database.
 </system-err>
   </testcase>

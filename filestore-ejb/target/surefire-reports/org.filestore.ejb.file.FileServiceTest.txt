@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: org.filestore.ejb.file.FileServiceTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.154 sec <<< FAILURE!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.18 sec <<< FAILURE!
 testPostAndDeleteFile(org.filestore.ejb.file.FileServiceTest)  Time elapsed: 0.026 sec  <<< ERROR!
 org.filestore.api.FileServiceException: java.lang.IllegalArgumentException: Unknown entity: org.filestore.ejb.file.entity.FileItemEntity
 	at org.filestore.ejb.file.FileServiceBean.internalPostFile(FileServiceBean.java:120)

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: org.filestore.ejb.file.FileServiceMetricsTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.294 sec <<< FAILURE!
-org.filestore.ejb.file.FileServiceMetricsTest  Time elapsed: 0.294 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.295 sec <<< FAILURE!
+org.filestore.ejb.file.FileServiceMetricsTest  Time elapsed: 0.295 sec  <<< ERROR!
 org.jboss.arquillian.container.spi.ConfigurationException: jbossHome '/opt/wildfly-9.0.1.Final' must exist
 	at org.jboss.arquillian.container.spi.client.deployment.Validate.configurationDirectoryExists(Validate.java:139)
 	at org.jboss.as.arquillian.container.DistributionContainerConfiguration.validate(DistributionContainerConfiguration.java:99)

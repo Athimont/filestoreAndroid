@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="org.filestore.ejb.file.FileItemTest" time="0.012" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="org.filestore.ejb.file.FileItemTest" time="0.017" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
@@ -63,7 +63,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="org.filestore.ejb.file.FileItemTest" name="testFileItem" time="0.012">
+  <testcase classname="org.filestore.ejb.file.FileItemTest" name="testFileItem" time="0.017">
     <failure message="Exception during testPersistence" type="java.lang.AssertionError">java.lang.AssertionError: Exception during testPersistence
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.filestore.ejb.file.FileItemTest.testFileItem(FileItemTest.java:131)
@@ -99,41 +99,41 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-err>nov. 09, 2016 9:40:15 AM org.filestore.ejb.file.FileItemTest setUp
+    <system-err>nov. 12, 2016 3:20:23 PM org.filestore.ejb.file.FileItemTest setUp
 INFOS: Starting memory database for unit tests
-nov. 09, 2016 9:40:15 AM org.filestore.ejb.file.FileItemTest setUp
+nov. 12, 2016 3:20:24 PM org.filestore.ejb.file.FileItemTest setUp
 INFOS: Building Hibernate EntityManager for unit tests
-nov. 09, 2016 9:40:15 AM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+nov. 12, 2016 3:20:24 PM org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
 INFO: HHH000204: Processing PersistenceUnitInfo [
 	name: testPU
 	...]
-nov. 09, 2016 9:40:15 AM org.hibernate.Version logVersion
+nov. 12, 2016 3:20:24 PM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate Core {5.0.1.Final}
-nov. 09, 2016 9:40:15 AM org.hibernate.cfg.Environment &lt;clinit&gt;
+nov. 12, 2016 3:20:24 PM org.hibernate.cfg.Environment &lt;clinit&gt;
 INFO: HHH000206: hibernate.properties not found
-nov. 09, 2016 9:40:15 AM org.hibernate.cfg.Environment buildBytecodeProvider
+nov. 12, 2016 3:20:24 PM org.hibernate.cfg.Environment buildBytecodeProvider
 INFO: HHH000021: Bytecode provider name : javassist
-nov. 09, 2016 9:40:15 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager &lt;clinit&gt;
+nov. 12, 2016 3:20:24 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager &lt;clinit&gt;
 INFO: HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
-nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+nov. 12, 2016 3:20:24 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH000402: Using Hibernate built-in connection pool (not for production use!)
-nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 12, 2016 3:20:24 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000401: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:memory:unit-testing-jpa]
-nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 12, 2016 3:20:24 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000046: Connection properties: {user=, password=****}
-nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+nov. 12, 2016 3:20:24 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH000006: Autocommit mode: false
-nov. 09, 2016 9:40:16 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+nov. 12, 2016 3:20:24 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
-nov. 09, 2016 9:40:16 AM org.hibernate.dialect.Dialect &lt;init&gt;
+nov. 12, 2016 3:20:24 PM org.hibernate.dialect.Dialect &lt;init&gt;
 INFO: HHH000400: Using dialect: org.hibernate.dialect.DerbyDialect
-nov. 09, 2016 9:40:16 AM org.hibernate.dialect.DerbyDialect &lt;init&gt;
+nov. 12, 2016 3:20:24 PM org.hibernate.dialect.DerbyDialect &lt;init&gt;
 WARN: HHH000430: The DerbyDialect dialect has been deprecated; use one of the version-specific dialects instead
-nov. 09, 2016 9:40:16 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
+nov. 12, 2016 3:20:25 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
 INFO: HHH000227: Running hbm2ddl schema export
-nov. 09, 2016 9:40:16 AM org.hibernate.tool.hbm2ddl.SchemaExport execute
+nov. 12, 2016 3:20:25 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
 INFO: HHH000230: Schema export complete
-nov. 09, 2016 9:40:16 AM org.filestore.ejb.file.FileItemTest testFileItem
+nov. 12, 2016 3:20:25 PM org.filestore.ejb.file.FileItemTest testFileItem
 GRAVE: error during testing file item
 java.lang.IllegalArgumentException: Unknown entity: org.filestore.ejb.file.entity.FileItemEntity
 	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:1149)
