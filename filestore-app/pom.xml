@@ -12,7 +12,7 @@
     <artifactId>filestore-app</artifactId>
     <name>The FileStore : Android Module</name>
     <version>0.1.0</version>
-    <packaging>jar</packaging>
+    <packaging>apk</packaging>
 
     <properties>
         <!-- use UTF-8 for everything -->
@@ -28,4 +28,40 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    
+ <build>
+   <resources>
+	 <!-- filter manifest and put filtered file in target/filtered-manifest/ -->
+	 <resource>
+	   <directory>${project.basedir}</directory>
+	   <filtering>true</filtering>
+	   <targetPath>${project.build.directory}/filtered-manifest</targetPath>
+	   <includes>
+	     <include>AndroidManifest.xml</include>
+	   </includes>
+	 </resource>
+   </resources>  
+   <plugins>
+    <plugin>
+      <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+      <artifactId>maven-android-plugin</artifactId>
+      <configuration>
+        <sdk>
+          <path>${env.ANDROID_HOME}</path>
+          <platform>23</platform>
+        </sdk>
+        <deleteconflictingfiles>true</deleteconflictingfiles>
+      </configuration>
+      <extensions>true</extensions>
+    </plugin>
+    <plugin>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <configuration>
+        <source>1.6</source>
+        <target>1.6</target>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+    
 </project>
