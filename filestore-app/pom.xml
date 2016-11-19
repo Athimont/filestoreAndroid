@@ -8,16 +8,10 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
   
-  <groupId>fr.miage.jayblanc</groupId>
   <artifactId>filestore-app</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
   <name>The FileStore : Android Module</name>
-  <url>http://maven.apache.org</url>
   <packaging>apk</packaging>
   
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
   
   <dependencies>
     <dependency>

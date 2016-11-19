@@ -1,4 +1,5 @@
 org\filestore\ejb\file\FileServiceMetricsTest$1.class
+org\filestore\ejb\EjbTestSuite.class
 org\filestore\ejb\file\JBossLoginContextFactory$1.class
 org\filestore\ejb\file\JBossLoginContextFactory.class
 org\filestore\ejb\file\FileServiceMetricsTest.class
