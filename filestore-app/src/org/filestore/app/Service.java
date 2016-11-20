@@ -1,8 +1,7 @@
 package org.filestore.app;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.File;
+
 import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
@@ -14,6 +13,7 @@ import javax.naming.NamingException;
 
 import org.filestore.api.FileService;
 import org.filestore.api.FileServiceException;
+
 
 public class Service {
 	
@@ -40,19 +40,17 @@ public class Service {
 		return service;
 	}
 	
-	public boolean postFile(String owner, List<String> receivers, String message,String filename, Path file){
+	public boolean postFile(String owner, List<String> receivers, String message,String filename, String file){
 		try{
 			if ( Boolean.TRUE.equals(isInAppclient) ) {
 				LOGGER.log(Level.INFO, "We ARE in a client container");
 			}
-			byte[] content = Files.readAllBytes(file);
+			File f = new File(file);
+			byte[] content = new byte[(int)f.length()];
 			getFileServiceRemote().postFile(owner, receivers, message, filename, content);
 			return true;
 		}
 		catch(FileServiceException f){
-			return false;
-		}
-		catch(IOException i){
 			return false;
 		}
 		catch(NamingException n){
