@@ -233,6 +233,6 @@
 		<module>filestore-web</module>
 		<module>filestore-ear</module>
 		<module>filestore-client</module>
-		<module>filestore-app</module>
+		
   </modules>
 </project>

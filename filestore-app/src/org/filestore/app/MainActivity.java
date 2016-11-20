@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,11 +22,13 @@ public class MainActivity extends Activity {
     EditText sender, receiver, edittext, message;
     final int SEND_DONE = 0;
     private static final int REQUEST_PATH = 1;
+    Service service;
  
 	String curFileName;
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
+		this.service = new Service("localhost");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.sender = (EditText)findViewById(R.id.sender);
@@ -34,9 +41,8 @@ public class MainActivity extends Activity {
     	Intent intent1 = new Intent(this, ChooseActivity.class);
         startActivityForResult(intent1,REQUEST_PATH);
     }
- // Listen for results.
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        // See which child activity is calling us back.
     	if (requestCode == REQUEST_PATH){
     		if (resultCode == RESULT_OK) { 
     			curFileName = data.getStringExtra("GetPath") + "/" + data.getStringExtra("GetFileName");
@@ -56,19 +62,37 @@ public class MainActivity extends Activity {
         }
     }
 
+    private boolean testMail(String mail){
+    	Pattern p_mail = Pattern.compile("[a-zA-Z][[a-zA-Z0-9]*\\.|\\-|\\_]*[a-zA-Z0-9]*\\@[a-zA-Z][[a-zA-Z0-9]*\\.|\\-|\\_]*[a-zA-Z0-9]*\\.[a-zA-Z]{2,3}");
+        Matcher matcher = p_mail.matcher(mail);
+    	if(!matcher.matches()){
+            return false;
+        }
+    	return true;
+    }
+    
+    private boolean testReceivers(List<String> mails){
+    	for(String mail : mails){
+    		if(!testMail(mail)){
+    			return false;
+    		}
+    	}
+    	return true;
+    }
+
     public void send(View view){
         String sender_mail = this.sender.getText().toString();
         String receiver_mail = this.receiver.getText().toString();
+        List <String> receivers;
+        receivers = Arrays.asList(receiver_mail.split(" "));
+        
         String file =this.edittext.getText().toString();
-        Pattern p_mail = Pattern.compile("[a-zA-Z][[a-zA-Z0-9]*\\.|\\-|\\_]*[a-zA-Z0-9]*\\@[a-zA-Z][[a-zA-Z0-9]*\\.|\\-|\\_]*[a-zA-Z0-9]*\\.[a-zA-Z]{2,3}");
-        Matcher matcher_sender = p_mail.matcher(sender_mail);
-        Matcher matcher_receiver = p_mail.matcher(receiver_mail);
-        if(!matcher_sender.matches()){
+        
+        if(!testMail(sender_mail)){
             Toast.makeText(MainActivity.this, "The sender e-mail is wrong", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        if(!matcher_receiver.matches()){
+        if(!testReceivers(receivers)){
             Toast.makeText(MainActivity.this, "The receiver e-mail is wrong", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -77,9 +101,14 @@ public class MainActivity extends Activity {
             Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        Intent intent = new Intent(MainActivity.this, SendActivity.class);
-        //TODO : méthode permettant l'envoie grace à maven
-        startActivityForResult(intent,SEND_DONE);
+        Path path = Paths.get(this.curFileName);
+        boolean bol = service.postFile(sender_mail, receivers, this.message.getText().toString(), file, path);
+        if(bol){
+	        Intent intent = new Intent(MainActivity.this, SendActivity.class);
+	        startActivityForResult(intent,SEND_DONE);
+        }
+        else{
+        	Toast.makeText(MainActivity.this, "L'envoie Ã  Ã©chouÃ©", Toast.LENGTH_SHORT).show();
+        }
     }
 }
