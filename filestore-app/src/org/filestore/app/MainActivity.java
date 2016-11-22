@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -20,13 +22,13 @@ public class MainActivity extends Activity {
     private static final int REQUEST_PATH = 1;
     Service service;
  
-	String curFileName;
+	String currentPath;
 	
 	
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
-		this.service = new Service("localhost");
+		this.service = new Service("filestore-app","http://10.0.2.2:8080/filestore-ejb/FileServiceBean?wsdl","postfile3",this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.sender = (EditText)findViewById(R.id.sender);
@@ -43,7 +45,7 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
     	if (requestCode == REQUEST_PATH){
     		if (resultCode == RESULT_OK) { 
-    			this.curFileName = data.getStringExtra("GetPath") + "/" + data.getStringExtra("GetFileName");
+    			this.currentPath = data.getStringExtra("GetPath") + "/" + data.getStringExtra("GetFileName");
             	this.edittext.setText(data.getStringExtra("GetFileName"));
                 return;
     		}
@@ -99,14 +101,18 @@ public class MainActivity extends Activity {
             Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_SHORT).show();
             return;
         }
-        boolean bol = service.postFile(sender_mail, receivers, this.message.getText().toString(), file, this.curFileName);
-        System.out.println("test");
-        if(bol){
+        
+        Message m =new Message(sender_mail, receivers, this.message.getText().toString(), new File(this.currentPath), this.edittext.getText().toString());
+
+        
+        service.execute(m);
+        
+        /*if(){
 	        Intent intent = new Intent(MainActivity.this, SendActivity.class);
 	        startActivityForResult(intent,SEND_DONE);
         }
         else{
         	Toast.makeText(MainActivity.this, "L'envoie à échoué", Toast.LENGTH_SHORT).show();
-        }
+        }*/
     }
 }
