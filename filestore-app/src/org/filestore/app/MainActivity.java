@@ -13,14 +13,11 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.filestore.app.SendActivity.PUBLIC_STATIC_STRING;
-
 public class MainActivity extends Activity {
 
     EditText sender, receiver, edittext, message;
     final int SEND_DONE = 0;
     private static final int REQUEST_PATH = 1;
-    Service service;
  
 	String currentPath;
 	
@@ -28,7 +25,6 @@ public class MainActivity extends Activity {
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
-		this.service = new Service("filestore-app","http://10.0.2.2:8080/filestore-ejb/FileServiceBean?wsdl","postfile3",this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.sender = (EditText)findViewById(R.id.sender);
@@ -49,16 +45,6 @@ public class MainActivity extends Activity {
             	this.edittext.setText(data.getStringExtra("GetFileName"));
                 return;
     		}
-        }
-        if(requestCode == SEND_DONE){
-            if (resultCode == SendActivity.RESULT_OK) {
-                String s =data.getStringExtra(PUBLIC_STATIC_STRING);
-                this.sender.setText(s);
-                this.receiver.setText(s);
-                this.edittext.setText(s);
-                this.message.setText(s);
-                return;
-            }
         }
     }
 
@@ -104,15 +90,7 @@ public class MainActivity extends Activity {
         
         Message m =new Message(sender_mail, receivers, this.message.getText().toString(), new File(this.currentPath), this.edittext.getText().toString());
 
-        
+        Service service = new Service(this);
         service.execute(m);
-        
-        /*if(){
-	        Intent intent = new Intent(MainActivity.this, SendActivity.class);
-	        startActivityForResult(intent,SEND_DONE);
-        }
-        else{
-        	Toast.makeText(MainActivity.this, "L'envoie à échoué", Toast.LENGTH_SHORT).show();
-        }*/
     }
 }

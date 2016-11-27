@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\file_icon.png",
+        "source": "C:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\src\\main\\res\\drawable\\file_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\directory_icon.png",
+        "source": "C:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\src\\main\\res\\drawable\\directory_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\directory_up.png",
+        "source": "C:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\src\\main\\res\\drawable\\directory_up.png"
+    }
+]

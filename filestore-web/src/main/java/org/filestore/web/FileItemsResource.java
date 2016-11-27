@@ -20,6 +20,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -30,6 +31,7 @@ import org.filestore.api.FileServiceException;
 import org.filestore.api.FileServiceLocal;
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 import org.jboss.resteasy.plugins.providers.multipart.MultipartFormDataInput;
+
 
 @Path("/files")
 @RequestScoped
@@ -100,6 +102,36 @@ public class FileItemsResource {
 		String id = fileServiceLocal.postFile(owner, receivers, message, name, data);
 		
 		return Response.ok(id).build();
+	}
+	
+	//TODO: faire en sorte que le deployed success.
+	@GET
+	@Path("/dopostfile")  
+    @Produces(MediaType.APPLICATION_JSON) 
+	public String postFile(@QueryParam("owner") String owner, @QueryParam("receiver") List<String> receivers, @QueryParam("filename") String filename, @QueryParam("file") InputStream file, @QueryParam("message") String message) throws IOException, FileServiceException {
+
+		String response = "";
+		if ( message == null ) {
+			message = "A files as been uploaded for you";
+		}
+		
+		if ( owner == null ) {
+			response = Utility.constructJSON("register", false, "There is no owner");
+		}
+		else if ( receivers == null ) {
+			response = Utility.constructJSON("register", false, "There is no receiver");
+		} 
+		else if ( filename == null ) {
+			response = Utility.constructJSON("register", false, "The file name is empty");
+		}
+		else if ( file == null){
+			response = Utility.constructJSON("register", false, "There is no file");
+		}
+		else{
+			String res = fileServiceLocal.postFile(owner, receivers, message, filename, file);
+			response = Utility.constructJSON("register", true, res);
+		}
+		return response;
 	}
 	
 	@GET

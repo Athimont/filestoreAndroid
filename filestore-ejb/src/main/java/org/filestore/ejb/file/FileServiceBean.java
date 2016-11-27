@@ -88,15 +88,6 @@ public class FileServiceBean implements FileService, FileServiceLocal, FileServi
 	
 	@Override
 	@TransactionAttribute(TransactionAttributeType.REQUIRED)
-	public String postFile(String owner, String receiver, String message, String name, byte[] data) throws FileServiceException {
-		LOGGER.log(Level.INFO, "Post File called (byte[])");
-		List<String> receivers =new ArrayList<String>();
-		receivers.add(receiver);
-		return this.internalPostFile(owner, receivers, message, name, new ByteArrayInputStream(data));
-	}
-	
-	@Override
-	@TransactionAttribute(TransactionAttributeType.REQUIRED)
 	public String postFile(String owner, List<String> receivers, String message, String name, InputStream stream) throws FileServiceException {
 		LOGGER.log(Level.INFO, "Post File called (InputStream)");
 		return this.internalPostFile(owner, receivers, message, name, stream);
@@ -303,6 +294,5 @@ public class FileServiceBean implements FileService, FileServiceLocal, FileServi
 	        return "InputStreamDataSource";
 	    }
 	}
-
 
 }
