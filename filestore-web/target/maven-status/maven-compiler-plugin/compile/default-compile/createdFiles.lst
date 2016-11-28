@@ -1,3 +1,4 @@
+org\filestore\web\Utility.class
 org\filestore\web\FileItemsResource.class
 org\filestore\web\FileMetricsResource.class
 org\filestore\web\FileStoreApplication.class
