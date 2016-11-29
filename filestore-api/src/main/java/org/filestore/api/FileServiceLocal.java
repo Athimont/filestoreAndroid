@@ -12,4 +12,5 @@ public interface FileServiceLocal {
 	
 	public String postFile(String owner, List<String> receivers, String message, String name, InputStream stream) throws FileServiceException;
 
+	public String postFile(String owner, String receivers, String message, String name, InputStream stream) throws FileServiceException;
 }

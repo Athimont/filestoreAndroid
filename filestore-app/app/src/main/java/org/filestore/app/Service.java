@@ -1,46 +1,68 @@
 package org.filestore.app;
 
-import android.app.Activity;
-import android.widget.Toast;
+import android.os.AsyncTask;
 
-import com.loopj.android.http.AsyncHttpResponseHandler;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.InputStreamBody;
+import org.apache.http.entity.mime.content.StringBody;
+import org.apache.http.impl.client.DefaultHttpClient;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
-public class Service extends AsyncHttpResponseHandler{
+public class Service extends AsyncTask<Message,String,Boolean>{
 
-	private Activity activity;
+	final String protocol = "http://";
+	final String host = "10.0.2.2";
+	final String port = "8080";
+	final String requestPath = "/api/files";
+	final String url = protocol + host + ":" + port + requestPath;
 
-	public Service(Activity activity) {
-		this.activity = activity;
-	}
+	@Override
+	protected Boolean doInBackground(Message... messages) {
+        try {
+            HttpClient client = new DefaultHttpClient();
+            HttpPost postRequest = new HttpPost (url);
 
-	public void onSuccess(String response) {
-		try {
-			JSONObject obj = new JSONObject(response);
-			if(obj.getBoolean("status")){
-				Toast.makeText(this.activity, "Mail Send! " + obj.getString("error_msg") , Toast.LENGTH_LONG).show();
-			}
-			else{
-				Toast.makeText(this.activity, obj.getString("error_msg"), Toast.LENGTH_LONG).show();
-			}
-		} catch (JSONException e) {
-			Toast.makeText(this.activity, "Error Occured [Server's JSON response might be invalid]!", Toast.LENGTH_LONG).show();
-			e.printStackTrace();
-		}
+            MultipartEntityBuilder entity = MultipartEntityBuilder.create();
+            entity.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+
+            Message m = messages[0];
+
+            StringBody owner = new StringBody(m.getSender(), ContentType.TEXT_PLAIN);
+            entity.addPart("owner",owner);
+
+            for(String s : m.getReceivers()){
+                StringBody receiver = new StringBody(s, ContentType.TEXT_PLAIN);
+                entity.addPart("receivers",receiver);
+            }
+
+            InputStreamBody file = new InputStreamBody(m.getFile(), ContentType.MULTIPART_FORM_DATA);
+            entity.addPart("file",file);
+
+            StringBody file_name = new StringBody(m.getFile_name(), ContentType.TEXT_PLAIN);
+            entity.addPart("file_name",file_name);
+
+            StringBody message = new StringBody(m.getMessage(), ContentType.TEXT_PLAIN);
+            entity.addPart("message",message);
+
+            postRequest.setEntity(entity.build());
+            HttpResponse reponse = client.execute(postRequest);
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
 	}
 
 	@Override
-	public void onFailure(int statusCode, Throwable error, String content) {
-		if(statusCode == 404){
-			Toast.makeText(this.activity, "Requested resource not found", Toast.LENGTH_LONG).show();
-		}
-		else if(statusCode == 500){
-			Toast.makeText(this.activity, "Something went wrong at server end", Toast.LENGTH_LONG).show();
-		}
-		else{
-			Toast.makeText(this.activity, "Unexpected Error occcured! [Most common Error: Device might not be connected to Internet or remote server is not up and running]", Toast.LENGTH_LONG).show();
-		}
+	protected void onPostExecute(Boolean b) {
+		super.onPostExecute(b);
 	}
 }

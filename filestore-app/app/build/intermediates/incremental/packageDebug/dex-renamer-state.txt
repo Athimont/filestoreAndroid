@@ -1,4 +1,4 @@
-#Sun Nov 27 22:13:41 CET 2016
+#Tue Nov 29 14:24:20 CET 2016
 base.0=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_94640b92e9ae55f50c4eefd7a0c305348258c672
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -15,6 +15,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -95,7 +96,12 @@ public class FileItemsResource {
 		} else {
 			InputPart part = form.get("file").get(0);
 			String contentHeader = part.getHeaders().getFirst("Content-Disposition");
-			name = contentHeader.substring(contentHeader.lastIndexOf("=")+1).replaceAll("\"", "");
+			if(!form.containsKey("file_name")){
+				name = contentHeader.substring(contentHeader.lastIndexOf("=")+1).replaceAll("\"", "");
+			}
+			else{
+				name = form.get("file_name").get(0).getBodyAsString();
+			}
 			data = part.getBody(InputStream.class, null);
 		}
 		

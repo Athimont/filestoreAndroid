@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Nov 27 22:13:35 CET 2016
+#Tue Nov 29 14:24:07 CET 2016
 2.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 5.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\directory_icon.png
 5.set=ANDROID_RESOURCE
@@ -23,11 +23,11 @@ count=11
 10.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 1.set=ANDROID_RESOURCE
 7.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
-2.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
+2.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\activity_fileexplorer.xml
 6.set=ANDROID_RESOURCE
 0.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 8.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
-3.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\activity_fileexplorer.xml
+3.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
 3.set=ANDROID_RESOURCE
 1.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 9.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
