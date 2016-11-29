@@ -5,24 +5,12 @@ import android.app.Activity;
 import android.content.Intent; 
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import org.apache.http.HttpVersion;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.mime.HttpMultipartMode;
-import org.apache.http.entity.mime.MultipartEntity;
-import org.apache.http.entity.mime.content.StringBody;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.params.HttpParams;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -30,7 +18,9 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends Activity {
 
-    EditText sender, receiver, edittext, message;
+    EditText sender, receiver, edittext, message, fileIdDownload, fileIdDetails;
+    TextView owner, type, name, id, stream, lastDownload, creation, messageDetails, downloads, length;
+    TabHost tabHost;
     private static final int REQUEST_PATH = 1;
 
 	String currentPath;
@@ -45,6 +35,37 @@ public class MainActivity extends Activity {
         this.receiver = (EditText)findViewById(R.id.receiver);
         this.edittext = (EditText)findViewById(R.id.editText);
         this.message = (EditText)findViewById(R.id.message);
+        this.fileIdDownload =(EditText)findViewById(R.id.fileIdDownload);
+        this.fileIdDetails =(EditText)findViewById(R.id.fileIdDetails);
+        this.tabHost = (TabHost)findViewById(R.id.tabHost);
+        this.tabHost.setup();
+
+        TabHost.TabSpec spec = this.tabHost.newTabSpec("upload");
+        spec.setContent(R.id.upload);
+        spec.setIndicator("upload");
+        this.tabHost.addTab(spec);
+
+        spec = this.tabHost.newTabSpec("download");
+        spec.setContent(R.id.download);
+        spec.setIndicator("download");
+        this.tabHost.addTab(spec);
+
+        spec = this.tabHost.newTabSpec("details");
+        spec.setContent(R.id.details);
+        spec.setIndicator("details");
+        this.tabHost.addTab(spec);
+
+        this.owner = (TextView)findViewById(R.id.owner);
+        this.type = (TextView)findViewById(R.id.type);
+        this.name = (TextView)findViewById(R.id.name);
+        this.id = (TextView)findViewById(R.id.id);
+        this.stream = (TextView)findViewById(R.id.stream);
+        this.lastDownload = (TextView)findViewById(R.id.lastDownload);
+        this.creation = (TextView)findViewById(R.id.creation);
+        this.messageDetails = (TextView)findViewById(R.id.messageDetails);
+        this.downloads = (TextView)findViewById(R.id.downloads);
+        this.length = (TextView)findViewById(R.id.length);
+
     }
 
     public void getfile(View view){
@@ -104,7 +125,7 @@ public class MainActivity extends Activity {
         //TODO: Create and Post the MultipartFormDataInput
         try {
             Message m =new Message(sender_mail, receivers, this.message.getText().toString(), new FileInputStream(this.currentPath),this.edittext.getText().toString());
-            Service service = new Service(this);
+            ServiceUpload service = new ServiceUpload(this);
             service.execute(m);
         }
         catch (FileNotFoundException e) {
@@ -113,4 +134,21 @@ public class MainActivity extends Activity {
 
     }
 
+    public void download(View view){
+        String key = this.fileIdDownload.getText().toString();
+        ServiceDownload service = new ServiceDownload(this);
+        service.execute(key);
+    }
+
+    public void seeDetails(View view){
+        String key = this.fileIdDetails.getText().toString();
+        ServiceDetails service = new ServiceDetails(this);
+        service.execute(key);
+    }
+
+    public void delete(View view){
+        String key = this.fileIdDetails.getText().toString();
+        ServiceDelete service = new ServiceDelete(this);
+        service.execute(key);
+    }
 }

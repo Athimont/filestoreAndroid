@@ -14,12 +14,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="org.filestore.app.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_fileexplorer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.filestore.app.ChooseActivity"
+            android:name=".ChooseActivity"
             android:label="Choose File">
             <action android:name="com.example.fileexplorer.ChooseActivity" />
 

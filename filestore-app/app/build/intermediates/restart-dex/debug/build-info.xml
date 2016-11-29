@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="x86_64,x86"
     api-level="23"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="214508783290640"
+    timestamp="240062660718490"
     token="-1267111940919117847"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="362" />
+        duration="147" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="360" />
     <task
         name="instant-run-transform"
-        duration="133" />
+        duration="17" />
     <task
         name="verifier"
-        duration="33" />
+        duration="2" />
 
     <artifact
-        location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="214508783290640"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="239835771912081"
+        verifier="JAVA_RESOURCES_CHANGED" >
         <artifact
             location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="239983190032047"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\builds\debug\239983190032047\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="240062660718490"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

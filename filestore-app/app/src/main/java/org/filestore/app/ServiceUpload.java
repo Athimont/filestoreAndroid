@@ -18,7 +18,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-public class Service extends AsyncTask<Message,String,Boolean>{
+public class ServiceUpload extends AsyncTask<Message,String,Boolean>{
 
     private Activity activity;
 
@@ -28,7 +28,7 @@ public class Service extends AsyncTask<Message,String,Boolean>{
     final String requestPath = "/api/files";
     final String url = protocol + host + ":" + port + requestPath;
 
-    Service(Activity a){
+    ServiceUpload(Activity a){
         this.activity = a;
     }
 
