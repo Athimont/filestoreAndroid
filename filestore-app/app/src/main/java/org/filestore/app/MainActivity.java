@@ -89,26 +89,26 @@ public class MainActivity extends Activity {
         String file =this.edittext.getText().toString();
 
         if(!testMail(sender_mail)){
-            Toast.makeText(MainActivity.this, "The sender e-mail is wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "The sender e-mail is wrong", Toast.LENGTH_LONG).show();
             return;
         }
         if(!testReceivers(receivers)){
-            Toast.makeText(MainActivity.this, "The receiver e-mail is wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "The receiver e-mail is wrong", Toast.LENGTH_LONG).show();
             return;
         }
 
         if(file.equals("") || file == null){
-            Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_LONG).show();
             return;
         }
         //TODO: Create and Post the MultipartFormDataInput
         try {
             Message m =new Message(sender_mail, receivers, this.message.getText().toString(), new FileInputStream(this.currentPath),this.edittext.getText().toString());
-            Service service = new Service();
+            Service service = new Service(this);
             service.execute(m);
         }
         catch (FileNotFoundException e) {
-            e.printStackTrace();
+            Toast.makeText(MainActivity.this, "File not Found", Toast.LENGTH_SHORT).show();
         }
 
     }

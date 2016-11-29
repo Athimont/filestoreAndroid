@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Nov 29 14:24:21 CET 2016
+#Tue Nov 29 14:40:53 CET 2016
 25.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4\\classes.dex
 25.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_4
 22.set=ANDROID_RESOURCE
