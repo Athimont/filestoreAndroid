@@ -1,6 +1,9 @@
 package org.filestore.app;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.Handler;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -11,9 +14,16 @@ import org.json.JSONObject;
 public class Service extends AsyncHttpResponseHandler{
 
 	private Activity activity;
+    private Dialog progressdialog;
+    private Context mContext;
 
-	public Service(Activity activity) {
+
+    public Service(Activity activity, Context context) {
 		this.activity = activity;
+        mContext = context;
+        progressdialog = new Dialog(mContext);
+        progressdialog.createProgressDialog();
+        progressdialog.showProgressDialog();
 	}
 
 	public void onSuccess(String response) {
@@ -42,5 +52,7 @@ public class Service extends AsyncHttpResponseHandler{
 		else{
 			Toast.makeText(this.activity, "Unexpected Error occcured! [Most common Error: Device might not be connected to Internet or remote server is not up and running]", Toast.LENGTH_LONG).show();
 		}
+        progressdialog.dismiss();
 	}
+
 }

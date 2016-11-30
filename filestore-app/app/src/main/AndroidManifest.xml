@@ -26,6 +26,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
         </activity>
         <activity
             android:name="org.filestore.app.ChooseActivity"
@@ -34,6 +40,7 @@
 
             <category android:name="android.intent.category.DEFAULT" />
         </activity>
+
     </application>
 
 </manifest>

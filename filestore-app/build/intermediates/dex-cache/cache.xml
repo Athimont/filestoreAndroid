@@ -2,40 +2,58 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b1cd173cf6d697e69bfd5f3d3a5195fefa841b78">
-        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c90fb49c03256960a889ab00cc3b4a4ad7b8aa47\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5d5485f8ac3a66bb6430a0639a7d85479ad568f9">
-        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_94640b92e9ae55f50c4eefd7a0c305348258c672\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\athim\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.4\3bae85a076241828810bf8fbcc12e5891d5fc34c\android-async-http-1.4.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="3bae85a076241828810bf8fbcc12e5891d5fc34c">
-        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\android-async-http-1.4.4_57602a06650fa4c0ff698052481957ee2b339e66\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\athim\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        is-multidex="false"
+        jar="C:\Users\utilisateur\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_808c78ce85346cc946cb6d4f471fadf0777b01a6\classes.dex" />
+        <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_0f61e57e5a555eb19e43ed6db4a29a75c0efab66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b90922216d5de5a4304af61594c4924efb1852c3">
+        <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\instant-run_ed1e643767f0a923ee2ea06623eaa2ccbf57631e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ce805c75b453fc5e2954dd8729ae55e5a2ac196c">
+        <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_5046a7973b8e2e6d56d5a6b96108b407f3143962.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\utilisateur\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.4\3bae85a076241828810bf8fbcc12e5891d5fc34c\android-async-http-1.4.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3bae85a076241828810bf8fbcc12e5891d5fc34c">
+        <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.4_0bc89f2faa8228a3270d4aa4bcec527554760ed6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\utilisateur\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.4\3bae85a076241828810bf8fbcc12e5891d5fc34c\android-async-http-1.4.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3bae85a076241828810bf8fbcc12e5891d5fc34c">
+        <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.4_0bc89f2faa8228a3270d4aa4bcec527554760ed6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\utilisateur\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_0f61e57e5a555eb19e43ed6db4a29a75c0efab66.jar" />
     </item>
 
 </items>

@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="23"
-    density="xxhdpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="16"
+    density="hdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="68871809037582"
-    token="-1267111940919117847"
+    timestamp="28891948736090"
+    token="-4592639805254977530"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="743" />
+        duration="234" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="187" />
+        duration="17" />
     <task
         name="verifier"
-        duration="33" />
+        duration="4" />
 
     <artifact
-        location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
+        location="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="68871809037582"
+        timestamp="28891948736090"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
+            location="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 

@@ -1,8 +1,12 @@
 package org.filestore.app;
-  
+
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
-import android.app.Activity; 
-import android.content.Intent; 
+import android.provider.OpenableColumns;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -10,10 +14,11 @@ import android.widget.Toast;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -37,6 +42,56 @@ public class MainActivity extends Activity {
         this.receiver = (EditText)findViewById(R.id.receiver);
         this.edittext = (EditText)findViewById(R.id.editText);
         this.message = (EditText)findViewById(R.id.message);
+
+        Intent receivedIntent = getIntent();
+        String receveidAction = receivedIntent.getAction();
+
+        //l'appli lancé en mode partage de fichier
+        if(receveidAction.equals(Intent.ACTION_SEND)){
+            Uri receivedUri = (Uri)receivedIntent.getParcelableExtra(Intent.EXTRA_STREAM);
+            if(null != receivedUri){
+                String pathFile = getFilePathFromUri(receivedUri);
+                Log.v("PathFile Receive", receivedUri.toString());
+                Log.v("PathFile", pathFile);
+
+                String tabPathUri[] = pathFile.toString().split("/");
+                String nomFichier = tabPathUri[tabPathUri.length - 1];
+                currentPath = pathFile;
+                //Affiche le nom de l'image au lieu du path
+                edittext.setText(nomFichier);
+
+            }
+        }
+        //else{
+            //lancé en mode non partage de fichier(normal)
+        //}
+
+
+    }
+
+    //recupere le chemin du du fichier format /sdcard0/...
+    private String getFilePathFromUri(Uri fileUri){
+
+        if(fileUri.getScheme().startsWith("file")) {
+            //supprime les caractères bizarre dans le nom
+            String decodedUri = fileUri.decode(fileUri.toString());
+            return  fileUri.getPath();
+        }
+
+        Cursor cursor =
+                getContentResolver().query(fileUri, null, null, null, null);
+
+        if(null == cursor){
+            return null;
+        }
+        int pathIndex = cursor.getColumnIndex("_data");
+        if(null != cursor && cursor.moveToFirst()){
+            Log.v("columns",Arrays.toString(cursor.getColumnNames()));
+
+            return cursor.getString(pathIndex);
+        }
+
+        return null;
     }
 
     public void getfile(View view){
@@ -93,6 +148,7 @@ public class MainActivity extends Activity {
             Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_SHORT).show();
             return;
         }
+        Log.v("Current path " , currentPath);
         try {
             RequestParams params = new RequestParams();
             params.put("owner",sender_mail);
@@ -109,7 +165,7 @@ public class MainActivity extends Activity {
     private void post(RequestParams params) {
         // Make RESTful webservice call using AsyncHttpClient object
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post("http://10.0.2.2/api/files/dopostfile", params, new Service(this));
+        client.post("http://10.0.2.2/api/files/dopostfile", params, new Service(this, MainActivity.this));
     }
 
 }
