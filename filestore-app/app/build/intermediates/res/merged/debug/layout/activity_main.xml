@@ -1,103 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:weightSum="1">
-    <TextView android:id="@+id/textview"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Share a file"
-        android:textSize="24dp"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:paddingBottom="10dp" />
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:text="Sender E-mail :"
-        android:textSize="18dp"
+    <TabHost
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TextView"
-        android:paddingLeft="10dp" />
+        android:layout_height="match_parent"
+        android:id="@+id/tabHost">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/sender"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:text="Receiver E-mail :"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:paddingLeft="10dp" />
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/receiver"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <RelativeLayout android:id="@+id/relativeLayout1"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_weight="0.04">
-        <EditText
-            android:layout_alignParentLeft="true"
-            android:hint="EditText"
-            android:id="@+id/editText"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="15dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_toLeftOf="@+id/skipButton" >
-        </EditText>
+                <LinearLayout
+                    android:id="@+id/upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView android:id="@+id/textview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share a file"
+                        android:textSize="24dp"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="10dp" />
 
-        <Button android:text="Browser"
-            android:id="@+id/skipButton"
-            android:textSize="18dp"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:onClick="getfile" >
-        </Button>
-    </RelativeLayout>
+                    <TextView
+                        android:text="Sender E-mail :"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TextView"
+                        android:paddingLeft="10dp" />
 
-    <TextView
-        android:text="Message :"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:paddingLeft="10dp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/sender"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/message"
-        android:layout_weight="0.66" />
+                    <TextView
+                        android:text="Receiver E-mail :"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2"
+                        android:paddingLeft="10dp" />
 
-    <Button
-        android:text="Send"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/sendButton"
-        android:onClick="send" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/receiver"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <RelativeLayout android:id="@+id/relativeLayout1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content">
+                        <EditText
+                            android:layout_alignParentLeft="true"
+                            android:hint="EditText"
+                            android:id="@+id/editText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="15dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:layout_toLeftOf="@+id/skipButton" >
+                        </EditText>
+
+                        <Button android:text="Browser"
+                            android:id="@+id/skipButton"
+                            android:textSize="18dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:onClick="getfile" >
+                        </Button>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:text="Message :"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:paddingLeft="10dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/message"
+                        android:layout_weight="0.01" />
+
+                    <Button
+                        android:text="Send"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sendButton"
+                        android:onClick="send" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/download"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Download a File"
+                        android:textSize="24dp"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:id="@+id/textView4" />
+
+                    <TextView
+                        android:text="File ID :"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/textView" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:id="@+id/fileIdDownload" />
+
+                    <Button
+                        android:text="Download"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/downloadButton"
+                        android:onClick="download" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Details of a file"
+                                android:textSize="24dp"
+                                android:gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:id="@+id/textView5" />
+
+                            <TextView
+                                android:text="File ID :"
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/textView6" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                android:ems="10"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:id="@+id/fileIdDetails" />
+
+                            <Button
+                                android:text="Details"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/detailsButton"
+                                android:onClick="seeDetails" />
+
+                            <Button
+                                android:text="Delete"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/deleteButton"
+                                android:onClick="delete" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/owner" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/type" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/name" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/id" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/stream" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/lastDownload" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/creation" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/messageDetails" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/downloads" />
+
+                            <TextView
+                                android:text=""
+                                android:textSize="18dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:id="@+id/length" />
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 </LinearLayout>

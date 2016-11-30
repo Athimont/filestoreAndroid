@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fileexplorer.test">
+    package="com.example.fileexplorer.test" >
 
+<<<<<<< HEAD
     <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="15" />
+=======
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <instrumentation
+        android:name="com.android.test.runner.MultiDexTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.example.fileexplorer"
+        android:targetPackage="com.example.fileexplorer" />
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
 
     <application>
         <uses-library android:name="android.test.runner" />
     </application>
 
-    <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="com.example.fileexplorer"
-                     android:handleProfiling="false"
-                     android:functionalTest="false"
-                     android:label="Tests for com.example.fileexplorer"/>
 </manifest>

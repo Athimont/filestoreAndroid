@@ -295,4 +295,13 @@ public class FileServiceBean implements FileService, FileServiceLocal, FileServi
 	    }
 	}
 
+	@Override
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public String postFile(String owner, String receiver, String message, String name, InputStream stream) throws FileServiceException {
+		LOGGER.log(Level.INFO, "Post File called (InputStream)");
+		List<String> receivers = new ArrayList<String>();
+		receivers.add(receiver);
+		return this.internalPostFile(owner, receivers, message, name, stream);
+	}
+
 }

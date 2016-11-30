@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
+<<<<<<< HEAD
     abi="armeabi-v7a,armeabi"
     api-level="16"
     density="hdpi"
@@ -12,14 +13,29 @@
     <task
         name="javac"
         duration="234" />
+=======
+    abi="x86_64,x86"
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="240062660718490"
+    token="-1267111940919117847"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="147" />
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="360" />
     <task
         name="instant-run-transform"
         duration="17" />
     <task
         name="verifier"
+<<<<<<< HEAD
         duration="4" />
 
     <artifact
@@ -29,9 +45,34 @@
     <build
         timestamp="28891948736090"
         verifier="FULL_BUILD_REQUESTED" >
+=======
+        duration="2" />
+
+    <artifact
+        location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="239835771912081"
+        verifier="JAVA_RESOURCES_CHANGED" >
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
         <artifact
             location="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="239983190032047"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\builds\debug\239983190032047\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="240062660718490"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

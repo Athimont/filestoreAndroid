@@ -1,10 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+    }
     compileSdkVersion 16
     buildToolsVersion "24.0.3"
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.example.fileexplorer"
         minSdkVersion 11
         targetSdkVersion 15
@@ -22,7 +26,12 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     compile 'com.android.support:support-v4:18.0.0'
     compile 'com.loopj.android:android-async-http:1.4.4'
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+    compile('org.apache.httpcomponents:httpmime:4.3') {
+        exclude module: "httpclient"
+    }
 }

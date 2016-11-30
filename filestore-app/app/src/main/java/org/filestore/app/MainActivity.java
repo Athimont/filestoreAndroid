@@ -9,8 +9,11 @@ import android.provider.OpenableColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 
@@ -19,6 +22,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URI;
 import java.net.URISyntaxException;
+=======
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -26,8 +33,9 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends Activity {
 
-    EditText sender, receiver, edittext, message;
-    final int SEND_DONE = 0;
+    EditText sender, receiver, edittext, message, fileIdDownload, fileIdDetails;
+    TextView owner, type, name, id, stream, lastDownload, creation, messageDetails, downloads, length;
+    TabHost tabHost;
     private static final int REQUEST_PATH = 1;
 
 	String currentPath;
@@ -42,6 +50,7 @@ public class MainActivity extends Activity {
         this.receiver = (EditText)findViewById(R.id.receiver);
         this.edittext = (EditText)findViewById(R.id.editText);
         this.message = (EditText)findViewById(R.id.message);
+<<<<<<< HEAD
 
         Intent receivedIntent = getIntent();
         String receveidAction = receivedIntent.getAction();
@@ -92,6 +101,39 @@ public class MainActivity extends Activity {
         }
 
         return null;
+=======
+        this.fileIdDownload =(EditText)findViewById(R.id.fileIdDownload);
+        this.fileIdDetails =(EditText)findViewById(R.id.fileIdDetails);
+        this.tabHost = (TabHost)findViewById(R.id.tabHost);
+        this.tabHost.setup();
+
+        TabHost.TabSpec spec = this.tabHost.newTabSpec("upload");
+        spec.setContent(R.id.upload);
+        spec.setIndicator("upload");
+        this.tabHost.addTab(spec);
+
+        spec = this.tabHost.newTabSpec("download");
+        spec.setContent(R.id.download);
+        spec.setIndicator("download");
+        this.tabHost.addTab(spec);
+
+        spec = this.tabHost.newTabSpec("details");
+        spec.setContent(R.id.details);
+        spec.setIndicator("details");
+        this.tabHost.addTab(spec);
+
+        this.owner = (TextView)findViewById(R.id.owner);
+        this.type = (TextView)findViewById(R.id.type);
+        this.name = (TextView)findViewById(R.id.name);
+        this.id = (TextView)findViewById(R.id.id);
+        this.stream = (TextView)findViewById(R.id.stream);
+        this.lastDownload = (TextView)findViewById(R.id.lastDownload);
+        this.creation = (TextView)findViewById(R.id.creation);
+        this.messageDetails = (TextView)findViewById(R.id.messageDetails);
+        this.downloads = (TextView)findViewById(R.id.downloads);
+        this.length = (TextView)findViewById(R.id.length);
+
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
     }
 
     public void getfile(View view){
@@ -136,36 +178,56 @@ public class MainActivity extends Activity {
         String file =this.edittext.getText().toString();
 
         if(!testMail(sender_mail)){
-            Toast.makeText(MainActivity.this, "The sender e-mail is wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "The sender e-mail is wrong", Toast.LENGTH_LONG).show();
             return;
         }
         if(!testReceivers(receivers)){
-            Toast.makeText(MainActivity.this, "The receiver e-mail is wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "The receiver e-mail is wrong", Toast.LENGTH_LONG).show();
             return;
         }
 
         if(file.equals("") || file == null){
-            Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_LONG).show();
             return;
         }
+<<<<<<< HEAD
         Log.v("Current path " , currentPath);
+=======
+        //TODO: Create and Post the MultipartFormDataInput
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
         try {
-            RequestParams params = new RequestParams();
-            params.put("owner",sender_mail);
-            params.put("receivers", receivers);
-            params.put("filename",file);
-            params.put("file", new FileInputStream(this.currentPath));
-            params.put("message",this.message.getText().toString());
-            post(params);
-        } catch (FileNotFoundException e) {
-            Toast.makeText(MainActivity.this, "File not found", Toast.LENGTH_SHORT).show();
+            Message m =new Message(sender_mail, receivers, this.message.getText().toString(), new FileInputStream(this.currentPath),this.edittext.getText().toString());
+            ServiceUpload service = new ServiceUpload(this);
+            service.execute(m);
         }
+        catch (FileNotFoundException e) {
+            Toast.makeText(MainActivity.this, "File not Found", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
+<<<<<<< HEAD
     private void post(RequestParams params) {
         // Make RESTful webservice call using AsyncHttpClient object
         AsyncHttpClient client = new AsyncHttpClient();
         client.post("http://10.0.2.2/api/files/dopostfile", params, new Service(this, MainActivity.this));
+=======
+    public void download(View view){
+        String key = this.fileIdDownload.getText().toString();
+        ServiceDownload service = new ServiceDownload(this);
+        service.execute(key);
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
     }
 
+    public void seeDetails(View view){
+        String key = this.fileIdDetails.getText().toString();
+        ServiceDetails service = new ServiceDetails(this);
+        service.execute(key);
+    }
+
+    public void delete(View view){
+        String key = this.fileIdDetails.getText().toString();
+        ServiceDelete service = new ServiceDelete(this);
+        service.execute(key);
+    }
 }

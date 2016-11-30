@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 #Wed Nov 30 03:51:35 CET 2016
 base.0=C\:\\SID\\SID_Android\\workspace_AndroidStudio_SID\\ProjetServices\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\SID\\SID_Android\\workspace_AndroidStudio_SID\\ProjetServices\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+=======
+#Tue Nov 29 21:42:59 CET 2016
+base.0=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_94640b92e9ae55f50c4eefd7a0c305348258c672
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c90fb49c03256960a889ab00cc3b4a4ad7b8aa47\\classes.dex
+base.1=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c90fb49c03256960a889ab00cc3b4a4ad7b8aa47
+file.0=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_94640b92e9ae55f50c4eefd7a0c305348258c672\\classes.dex
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0

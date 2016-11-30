@@ -15,6 +15,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -95,43 +96,18 @@ public class FileItemsResource {
 		} else {
 			InputPart part = form.get("file").get(0);
 			String contentHeader = part.getHeaders().getFirst("Content-Disposition");
-			name = contentHeader.substring(contentHeader.lastIndexOf("=")+1).replaceAll("\"", "");
+			if(!form.containsKey("file_name")){
+				name = contentHeader.substring(contentHeader.lastIndexOf("=")+1).replaceAll("\"", "");
+			}
+			else{
+				name = form.get("file_name").get(0).getBodyAsString();
+			}
 			data = part.getBody(InputStream.class, null);
 		}
 		
 		String id = fileServiceLocal.postFile(owner, receivers, message, name, data);
 		
 		return Response.ok(id).build();
-	}
-	
-	//TODO: faire en sorte que le deployed success.
-	@GET
-	@Path("/dopostfile")  
-    @Produces(MediaType.APPLICATION_JSON) 
-	public String postFile(@QueryParam("owner") String owner, @QueryParam("receiver") List<String> receivers, @QueryParam("filename") String filename, @QueryParam("file") InputStream file, @QueryParam("message") String message) throws IOException, FileServiceException {
-
-		String response = "";
-		if ( message == null ) {
-			message = "A files as been uploaded for you";
-		}
-		
-		if ( owner == null ) {
-			response = Utility.constructJSON("register", false, "There is no owner");
-		}
-		else if ( receivers == null ) {
-			response = Utility.constructJSON("register", false, "There is no receiver");
-		} 
-		else if ( filename == null ) {
-			response = Utility.constructJSON("register", false, "The file name is empty");
-		}
-		else if ( file == null){
-			response = Utility.constructJSON("register", false, "There is no file");
-		}
-		else{
-			String res = fileServiceLocal.postFile(owner, receivers, message, filename, file);
-			response = Utility.constructJSON("register", true, res);
-		}
-		return response;
 	}
 	
 	@GET

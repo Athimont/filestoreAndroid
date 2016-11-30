@@ -2,6 +2,7 @@
 <items version="2" >
 
     <item
+<<<<<<< HEAD
         is-multidex="false"
         jar="C:\Users\utilisateur\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="true"
@@ -9,6 +10,33 @@
         revision="24.0.3"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
         <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_0f61e57e5a555eb19e43ed6db4a29a75c0efab66.jar" />
+=======
+        is-multidex="true"
+        jar="C:\Users\athim\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.4\3bae85a076241828810bf8fbcc12e5891d5fc34c\android-async-http-1.4.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3bae85a076241828810bf8fbcc12e5891d5fc34c">
+        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\android-async-http-1.4.4_57602a06650fa4c0ff698052481957ee2b339e66\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\athim\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient-android\4.3.5.1\eecbb0b998e77629862a13d957d552b3be58fc4e\httpclient-android-4.3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="eecbb0b998e77629862a13d957d552b3be58fc4e">
+        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\httpclient-android-4.3.5.1_6f5574a6cd29a0d806e0ca1a33e8ba1d34808ad1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="89c67399a4bb6bc2ad4ffc25f1dc9a44b1a76496">
+        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c90fb49c03256960a889ab00cc3b4a4ad7b8aa47\classes.dex" />
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
     </item>
     <item
         is-multidex="false"
@@ -16,6 +44,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
+<<<<<<< HEAD
         sha1="b90922216d5de5a4304af61594c4924efb1852c3">
         <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\instant-run_ed1e643767f0a923ee2ea06623eaa2ccbf57631e.jar" />
     </item>
@@ -36,6 +65,19 @@
         revision="24.0.3"
         sha1="3bae85a076241828810bf8fbcc12e5891d5fc34c">
         <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.4_0bc89f2faa8228a3270d4aa4bcec527554760ed6.jar" />
+=======
+        sha1="c535cef7effe17f057225375e0e28f8cefcbe2bb">
+        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_94640b92e9ae55f50c4eefd7a0c305348258c672\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_13c260594936a4ee84474fa3a88c796f2f111ccc\classes.dex" />
+>>>>>>> dd24e05c042ba2edbcedae749ca28ed4bdde33c0
     </item>
     <item
         is-multidex="false"
@@ -54,6 +96,15 @@
         revision="24.0.3"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
         <dex dex="C:\SID\SID_Android\workspace_AndroidStudio_SID\ProjetServices\filestoreAndroid\filestore-app\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_0f61e57e5a555eb19e43ed6db4a29a75c0efab66.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\athim\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.3\5b0002c5fb66867ca919be0fbd86de1cfaf76da7\httpmime-4.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5b0002c5fb66867ca919be0fbd86de1cfaf76da7">
+        <dex dex="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\transforms\dex\debug\folders\1000\10\httpmime-4.3_abbfa95060729f33f31d1d921d9ea05c6ba5ef2a\classes.dex" />
     </item>
 
 </items>
