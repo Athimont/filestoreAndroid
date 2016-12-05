@@ -40,11 +40,12 @@ public final class R {
         public static final int id=0x7f08001b;
         public static final int lastDownload=0x7f08001d;
         public static final int length=0x7f080021;
-        public static final int menu_settings=0x7f080026;
+        public static final int menu_settings=0x7f080028;
         public static final int message=0x7f08000b;
         public static final int messageDetails=0x7f08001f;
         public static final int name=0x7f08001a;
         public static final int owner=0x7f080018;
+        public static final int picture=0x7f080027;
         public static final int receiver=0x7f080006;
         public static final int relativeLayout1=0x7f080007;
         public static final int sendButton=0x7f08000c;
@@ -59,12 +60,14 @@ public final class R {
         public static final int textView5=0x7f080013;
         public static final int textView6=0x7f080014;
         public static final int textview=0x7f080002;
+        public static final int txt=0x7f080026;
         public static final int type=0x7f080019;
         public static final int upload=0x7f080001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int file_view=0x7f030001;
+        public static final int test_share_file=0x7f030002;
     }
     public static final class menu {
         public static final int activity_fileexplorer=0x7f070000;

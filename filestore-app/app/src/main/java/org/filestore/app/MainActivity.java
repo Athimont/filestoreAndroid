@@ -1,13 +1,21 @@
 package org.filestore.app;
-  
+
+import android.app.Activity;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
-import android.app.Activity; 
-import android.content.Intent; 
+import android.provider.OpenableColumns;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.RequestParams;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -66,6 +74,55 @@ public class MainActivity extends Activity {
         this.downloads = (TextView)findViewById(R.id.downloads);
         this.length = (TextView)findViewById(R.id.length);
 
+        Intent receivedIntent = getIntent();
+        String receveidAction = receivedIntent.getAction();
+
+        //l'appli lancé en mode partage de fichier
+        if(receveidAction.equals(Intent.ACTION_SEND)){
+            Uri receivedUri = (Uri)receivedIntent.getParcelableExtra(Intent.EXTRA_STREAM);
+            if(null != receivedUri){
+                String pathFile = getFilePathFromUri(receivedUri);
+                Log.v("PathFile Receive", receivedUri.toString());
+                Log.v("PathFile", pathFile);
+
+                String tabPathUri[] = pathFile.toString().split("/");
+                String nomFichier = tabPathUri[tabPathUri.length - 1];
+                currentPath = pathFile;
+                //Affiche le nom de l'image au lieu du path
+                edittext.setText(nomFichier);
+
+            }
+        }
+        //else{
+            //lancé en mode non partage de fichier(normal)
+        //}
+
+
+    }
+
+    //recupere le chemin du du fichier format /sdcard0/...
+    private String getFilePathFromUri(Uri fileUri){
+
+        if(fileUri.getScheme().startsWith("file")) {
+            //supprime les caractères bizarre dans le nom
+            String decodedUri = fileUri.decode(fileUri.toString());
+            return  fileUri.getPath();
+        }
+
+        Cursor cursor =
+                getContentResolver().query(fileUri, null, null, null, null);
+
+        if(null == cursor){
+            return null;
+        }
+        int pathIndex = cursor.getColumnIndex("_data");
+        if(null != cursor && cursor.moveToFirst()){
+            Log.v("columns",Arrays.toString(cursor.getColumnNames()));
+
+            return cursor.getString(pathIndex);
+        }
+
+        return null;
     }
 
     public void getfile(View view){
@@ -122,7 +179,6 @@ public class MainActivity extends Activity {
             Toast.makeText(MainActivity.this, "You must filled the EditText Feild", Toast.LENGTH_LONG).show();
             return;
         }
-        //TODO: Create and Post the MultipartFormDataInput
         try {
             Message m =new Message(sender_mail, receivers, this.message.getText().toString(), new FileInputStream(this.currentPath),this.edittext.getText().toString());
             ServiceUpload service = new ServiceUpload(this);

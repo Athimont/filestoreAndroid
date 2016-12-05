@@ -10,7 +10,7 @@ android {
     defaultConfig {
         multiDexEnabled true
         applicationId "com.example.fileexplorer"
-        minSdkVersion 8
+        minSdkVersion 11
         targetSdkVersion 15
     }
 

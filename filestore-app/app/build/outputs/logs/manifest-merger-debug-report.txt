@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml
@@ -59,7 +59,7 @@ ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\fil
 	android:name
 		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:20:22-69
 application
-ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:22:5-42:19
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:22:5-49:19
 	android:label
 		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:24:9-41
 	android:icon
@@ -67,7 +67,7 @@ ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\fil
 	android:theme
 		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:25:9-40
 activity#org.filestore.app.MainActivity
-ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:26:9-34:20
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:26:9-40:20
 	android:label
 		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:28:13-64
 	android:name
@@ -82,17 +82,27 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
 		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:32:27-74
-activity#org.filestore.app.ChooseActivity
-ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:35:9-41:20
-	android:label
-		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:37:13-40
+intent-filter#android.intent.action.SEND+android.intent.category.DEFAULT
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:34:13-39:29
+action#android.intent.action.SEND
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:36:13-43
-action#com.example.fileexplorer.ChooseActivity
-ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:38:13-78
-	android:name
-		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:38:21-75
+		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:40:13-72
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:36:17-76
 	android:name
-		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:40:23-69
+		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:36:27-73
+data
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:37:17-52
+	android:mimeType
+		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:37:23-49
+activity#org.filestore.app.ChooseActivity
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:41:9-47:20
+	android:label
+		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:43:13-40
+	android:name
+		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:42:13-43
+action#com.example.fileexplorer.ChooseActivity
+ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:44:13-78
+	android:name
+		ADDED from C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\src\main\AndroidManifest.xml:44:21-75

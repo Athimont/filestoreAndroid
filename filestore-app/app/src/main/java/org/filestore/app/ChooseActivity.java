@@ -24,7 +24,13 @@ public class ChooseActivity extends ListActivity {
 		currentPath = "/sdcard";
         fill(currentDir); 
     }
-    private void fill(File f)
+
+    /**
+	 * Cette méthode permet l'affichage du contenu d'un dossier
+	 * le dossier est passer en parametre
+	 * @param f
+     */
+	private void fill(File f)
 	{
     	File[]dirs = f.listFiles();
 		 this.setTitle("Current Dir: "+this.currentPath);
@@ -70,7 +76,18 @@ public class ChooseActivity extends ListActivity {
 		 adapter = new FileArrayAdapter(ChooseActivity.this, R.layout.file_view,dir);
 		 this.setListAdapter(adapter); 
     }
-    @Override
+
+    /**
+	 * Cette méthode ce déclanche lorsque l'on click sur un item de la liste
+	 * de dossier/fichier si c'est un dossier elle appel fill avec le dossier
+	 * clické en parametre, si c,'est un fichier elle envoie son nom et son path à la classe
+	 * MainActivity grace à la méthode onFileClick
+	 * @param l
+	 * @param v
+	 * @param position
+     * @param id
+     */
+	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
 		Item o = adapter.getItem(position);
@@ -94,9 +111,14 @@ public class ChooseActivity extends ListActivity {
 			onFileClick(o);
 		}
 	}
-    private void onFileClick(Item o)
+
+    /**
+	 * Cette méthode envoie le path et le nom d'un fichier
+	 * à la classe MainActivity
+	 * @param o
+     */
+	private void onFileClick(Item o)
     {
-    	//Toast.makeText(this, "Folder Clicked: "+ currentDir, Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent();
         intent.putExtra("GetPath",this.currentPath);
         intent.putExtra("GetFileName",o.getName());

@@ -23,11 +23,12 @@ int id fileIdDownload 0x7f080010
 int id id 0x7f08001b
 int id lastDownload 0x7f08001d
 int id length 0x7f080021
-int id menu_settings 0x7f080026
+int id menu_settings 0x7f080028
 int id message 0x7f08000b
 int id messageDetails 0x7f08001f
 int id name 0x7f08001a
 int id owner 0x7f080018
+int id picture 0x7f080027
 int id receiver 0x7f080006
 int id relativeLayout1 0x7f080007
 int id sendButton 0x7f08000c
@@ -42,10 +43,12 @@ int id textView4 0x7f08000e
 int id textView5 0x7f080013
 int id textView6 0x7f080014
 int id textview 0x7f080002
+int id txt 0x7f080026
 int id type 0x7f080019
 int id upload 0x7f080001
 int layout activity_main 0x7f030000
 int layout file_view 0x7f030001
+int layout test_share_file 0x7f030002
 int menu activity_fileexplorer 0x7f070000
 int string action_sign_in 0x7f060000
 int string action_sign_in_short 0x7f060001

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Nov 30 12:55:51 CET 2016
+#Mon Dec 05 14:11:39 CET 2016
 25.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9\\classes.dex
 25.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_9
 22.set=ANDROID_RESOURCE
@@ -12,7 +12,7 @@
 14.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\jars\\2\\1f\\main.jar
 16.set=DEX
 count=36
-6.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main\\META-INF\\services\\com.fasterxml.jackson.core.ObjectCodec
+6.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main\\META-INF\\services\\com.fasterxml.jackson.core.JsonFactory
 6.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
 26.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_main.xml
 2.set=DEX
@@ -22,7 +22,7 @@ count=36
 0.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_808c78ce85346cc946cb6d4f471fadf0777b01a6
 21.set=DEX
 20.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_94640b92e9ae55f50c4eefd7a0c305348258c672\\classes.dex
-7.set=ANDROID_RESOURCE
+7.set=JAVA_RESOURCE
 20.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_94640b92e9ae55f50c4eefd7a0c305348258c672
 10.set=DEX
 31.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_action_search.png
@@ -30,8 +30,8 @@ count=36
 31.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 15.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 26.set=ANDROID_RESOURCE
-7.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu-v11\\activity_fileexplorer.xml
-7.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
+7.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main\\META-INF\\services\\com.fasterxml.jackson.core.ObjectCodec
+7.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
 15.set=ANDROID_RESOURCE
 27.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\jackson-databind-2.4.1_26d055cba963c7b7847d32e29c4dad84da7cbbc4\\classes.dex
 27.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\jackson-databind-2.4.1_26d055cba963c7b7847d32e29c4dad84da7cbbc4
@@ -67,7 +67,7 @@ count=36
 33.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2\\classes.dex
 33.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2
 9.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c90fb49c03256960a889ab00cc3b4a4ad7b8aa47\\classes.dex
-5.set=JAVA_RESOURCE
+5.set=ANDROID_RESOURCE
 18.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\directory_up.png
 9.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_c90fb49c03256960a889ab00cc3b4a4ad7b8aa47
 35.set=DEX
@@ -105,7 +105,7 @@ count=36
 17.set=JAVA_RESOURCE
 13.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\jackson-core-2.4.1_a83c35bf766e130cf2f7359dd91ce619d4d343ac\\classes.dex
 13.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\jackson-core-2.4.1_a83c35bf766e130cf2f7359dd91ce619d4d343ac
-5.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main\\META-INF\\services\\com.fasterxml.jackson.core.JsonFactory
+5.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\test_share_file.xml
 3.set=DEX
-5.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\transforms\\mergeJavaRes\\debug\\folders\\2\\1f\\main
+5.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 33.set=DEX
