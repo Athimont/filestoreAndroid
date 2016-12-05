@@ -5,47 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="240062660718490"
+    timestamp="294590453739098"
     token="-1267111940919117847"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="147" />
+        duration="1205" />
     <task
         name="instant-run-dex"
-        duration="360" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="17" />
+        duration="294" />
     <task
         name="verifier"
-        duration="2" />
+        duration="51" />
 
     <artifact
-        location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="239835771912081"
-        verifier="JAVA_RESOURCES_CHANGED" >
+        timestamp="294590453739098"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="239983190032047"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\builds\debug\239983190032047\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="240062660718490"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\athim\OneDrive\Cours\BLANCHAR_Composant\filestoreAndroid\filestore-app\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

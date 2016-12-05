@@ -42,8 +42,8 @@ public class ServiceDetails extends AsyncTask<String,String,String> {
             String key = fileIds[0];
             HttpClient client = new DefaultHttpClient();
             String url = this.protocol + this.host + ":" + this.port + this.requestPath + key;
-            HttpGet deleteRequest = new HttpGet(url);
-            HttpResponse reponse = client.execute(deleteRequest);
+            HttpGet getRequest = new HttpGet(url);
+            HttpResponse reponse = client.execute(getRequest);
             InputStream is =reponse.getEntity().getContent();
             StringWriter writer = new StringWriter();
             IOUtils.copy(is, writer, "UTF-8");

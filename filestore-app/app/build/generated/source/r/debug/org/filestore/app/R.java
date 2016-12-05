@@ -10,6 +10,10 @@ package org.filestore.app;
 public final class R {
     public static final class attr {
     }
+    public static final class dimen {
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+    }
     public static final class drawable {
         public static final int directory_icon=0x7f020000;
         public static final int directory_up=0x7f020001;
@@ -18,35 +22,68 @@ public final class R {
         public static final int ic_launcher=0x7f020004;
     }
     public static final class id {
-        public static final int TextView=0x7f070001;
-        public static final int TextView01=0x7f07000c;
-        public static final int TextView02=0x7f07000d;
-        public static final int TextViewDate=0x7f07000e;
-        public static final int editText=0x7f070006;
-        public static final int fd_Icon1=0x7f07000b;
-        public static final int menu_settings=0x7f07000f;
-        public static final int message=0x7f070009;
-        public static final int receiver=0x7f070004;
-        public static final int relativeLayout1=0x7f070005;
-        public static final int sendButton=0x7f07000a;
-        public static final int sender=0x7f070002;
-        public static final int skipButton=0x7f070007;
-        public static final int textView2=0x7f070003;
-        public static final int textView3=0x7f070008;
-        public static final int textview=0x7f070000;
+        public static final int TextView=0x7f080003;
+        public static final int TextView01=0x7f080023;
+        public static final int TextView02=0x7f080024;
+        public static final int TextViewDate=0x7f080025;
+        public static final int creation=0x7f08001e;
+        public static final int deleteButton=0x7f080017;
+        public static final int details=0x7f080012;
+        public static final int detailsButton=0x7f080016;
+        public static final int download=0x7f08000d;
+        public static final int downloadButton=0x7f080011;
+        public static final int downloads=0x7f080020;
+        public static final int editText=0x7f080008;
+        public static final int fd_Icon1=0x7f080022;
+        public static final int fileIdDetails=0x7f080015;
+        public static final int fileIdDownload=0x7f080010;
+        public static final int id=0x7f08001b;
+        public static final int lastDownload=0x7f08001d;
+        public static final int length=0x7f080021;
+        public static final int menu_settings=0x7f080026;
+        public static final int message=0x7f08000b;
+        public static final int messageDetails=0x7f08001f;
+        public static final int name=0x7f08001a;
+        public static final int owner=0x7f080018;
+        public static final int receiver=0x7f080006;
+        public static final int relativeLayout1=0x7f080007;
+        public static final int sendButton=0x7f08000c;
+        public static final int sender=0x7f080004;
+        public static final int skipButton=0x7f080009;
+        public static final int stream=0x7f08001c;
+        public static final int tabHost=0x7f080000;
+        public static final int textView=0x7f08000f;
+        public static final int textView2=0x7f080005;
+        public static final int textView3=0x7f08000a;
+        public static final int textView4=0x7f08000e;
+        public static final int textView5=0x7f080013;
+        public static final int textView6=0x7f080014;
+        public static final int textview=0x7f080002;
+        public static final int type=0x7f080019;
+        public static final int upload=0x7f080001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int file_view=0x7f030001;
     }
     public static final class menu {
-        public static final int activity_fileexplorer=0x7f060000;
+        public static final int activity_fileexplorer=0x7f070000;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050001;
-        public static final int menu_settings=0x7f050002;
-        public static final int title_activity_fileexplorer=0x7f050003;
+        public static final int action_sign_in=0x7f060000;
+        public static final int action_sign_in_short=0x7f060001;
+        public static final int app_name=0x7f060002;
+        public static final int error_field_required=0x7f060003;
+        public static final int error_incorrect_password=0x7f060004;
+        public static final int error_invalid_email=0x7f060005;
+        public static final int error_invalid_password=0x7f060006;
+        public static final int hello_world=0x7f060007;
+        public static final int menu_settings=0x7f060008;
+        public static final int permission_rationale=0x7f060009;
+        public static final int prompt_email=0x7f06000a;
+        public static final int prompt_password=0x7f06000b;
+        public static final int title_activity_fileexplorer=0x7f06000c;
+        public static final int title_activity_main2=0x7f06000d;
     }
     public static final class style {
         public static final int AppTheme=0x7f040000;
