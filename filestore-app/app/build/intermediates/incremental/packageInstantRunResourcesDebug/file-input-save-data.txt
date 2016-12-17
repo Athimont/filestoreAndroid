@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Dec 05 14:11:18 CET 2016
+#Sat Dec 17 10:40:48 CET 2016
 2.base=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_
 5.file=C\:\\Users\\athim\\OneDrive\\Cours\\BLANCHAR_Composant\\filestoreAndroid\\filestore-app\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\directory_icon.png
 5.set=ANDROID_RESOURCE

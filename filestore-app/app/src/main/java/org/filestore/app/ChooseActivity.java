@@ -12,6 +12,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ListView;
 
+import model.Item;
+
 public class ChooseActivity extends ListActivity {
 
 	private String currentPath = "";

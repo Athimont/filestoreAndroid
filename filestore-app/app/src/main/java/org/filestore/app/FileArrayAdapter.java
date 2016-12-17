@@ -11,7 +11,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView; 
 import android.widget.TextView;
 
+import model.Item;
 
+/**
+ * Cette classe permet d'adapter la liste d'item
+ * à ce que l'on veux voir dans la vue
+ * c'est ici que l'on défini lafiichage de la liste
+ */
 public class FileArrayAdapter extends ArrayAdapter<Item>{
 
 	private Context c;

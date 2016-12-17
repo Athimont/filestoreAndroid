@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.OpenableColumns;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -14,9 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.RequestParams;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -24,10 +20,16 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import model.Message;
+import services.access.ServiceDelete;
+import services.access.ServiceDetails;
+import services.access.ServiceDownload;
+import services.access.ServiceUpload;
+
 public class MainActivity extends Activity {
 
     EditText sender, receiver, edittext, message, fileIdDownload, fileIdDetails;
-    TextView owner, type, name, id, stream, lastDownload, creation, messageDetails, downloads, length;
+    public TextView owner, type, name, id, stream, lastDownload, creation, messageDetails, downloads, length;
     TabHost tabHost;
     private static final int REQUEST_PATH = 1;
 
@@ -100,7 +102,12 @@ public class MainActivity extends Activity {
 
     }
 
-    //recupere le chemin du du fichier format /sdcard0/...
+    /**
+     *
+     * recupere le chemin du fichier format /sdcard/..
+     * @param fileUri
+     * @return
+     */
     private String getFilePathFromUri(Uri fileUri){
 
         if(fileUri.getScheme().startsWith("file")) {
@@ -125,11 +132,22 @@ public class MainActivity extends Activity {
         return null;
     }
 
+    /**
+     * Methode qui permet de lancer la vue de recherche de fichier
+     * @param view
+     */
     public void getfile(View view){
     	Intent intent1 = new Intent(this, ChooseActivity.class);
         startActivityForResult(intent1,REQUEST_PATH);
     }
 
+    /**
+     * Cette méthode permet a la MainActivity de récupérer les données
+     * envoyer par les autres vue
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
     	if (requestCode == REQUEST_PATH){
     		if (resultCode == RESULT_OK) {
